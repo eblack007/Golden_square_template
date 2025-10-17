@@ -1,4 +1,4 @@
-from lib.age_checker import age_checker
+from lib.age_checker import *
 
 def test_age_checker():
     # age_checker_today = datetime.strptime('1960-10-21')
