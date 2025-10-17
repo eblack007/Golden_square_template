@@ -1,2 +1,13 @@
-def age_checker():
-    return datetime.strptime('1960-10-21')
+from datetime import datetime 
+
+def age_checker(some_DOB):
+    # return datetime.strptime('1960-10-21')
+    # return "access granted"
+    today = datetime.now().date()
+    # formatted_today = datetime.strptime(today, "%Y-%m-%d")
+    DOB_datetime = datetime.strptime(some_DOB, "%Y-%m-%d").date()
+    diff_today_DOB = today - DOB_datetime
+    years_diff = int((diff_today_DOB.days) / 365)
+    if years_diff > 16:
+        return "access granted"
+    return "access denied"
